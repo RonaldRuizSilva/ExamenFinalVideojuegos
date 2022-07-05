@@ -29,12 +29,12 @@ public interface Servicio {
     @PUT("/Libros/{id}")
     Call<ResponseBody> actualizarLibro(@Body ModelLibro libro, @Path("id") String id);
 
-    @POST("/favoritos")
+    @POST("/Favoritos")
     Call<ModelLibro> crearFavortito(@Body ModelLibro libro);
 
-    @DELETE("/favoritos/{id}")
+    @DELETE("/Favoritos/{id}")
     Call<ResponseBody> eliminarFavorito(@Path("id") String id);
 
-    @GET("/favoritos")
+    @GET("/Favoritos")
     Call<List<ModelLibro>> obtenerListaFavoritos();
 }
